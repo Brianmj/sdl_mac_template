@@ -6,10 +6,18 @@
 //  Copyright © 2019 Brian Jones. All rights reserved.
 //
 
-#include <iostream>
+#include "knu_game.hpp"
 
 int main(int argc, const char * argv[]) {
     // insert code here...
-    std::cout << "Hello, World!\n";
+    Game g;
+    
+    bool success = g.initialize();
+    
+    if(success)
+        g.run_loop();
+    
+    g.shutdown();
+    
     return 0;
 }
